@@ -16,5 +16,6 @@
     =link_to group_messages_path(group), class: "test-appearance" do
      .group__group-name 
       = group.name
-     .group__latest-message まだメッセージがありません
+     .group__latest-message 
+      = group.show_last_message
 
