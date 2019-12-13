@@ -1,7 +1,7 @@
-.new-message
- .input-box
-  %input.input-box__text{name: "message[content]", placeholder: "type a message", type: "text", id: "message_content"}
-   %label.input-box__image{for: "message_image"}
-    = icon("fa", "image")
-    %input.input-box__image__file{name: "message[image]", type: "file", id: "message_image"}
- %input.submit-btn{name: "comit", type: "submit", value: "send", data_disable_with: "send"}
+= form_for [@group, @message] do |f|
+  = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+  .form__mask
+    = f.label :image, class: 'form__mask__image' do
+      = icon('fas', 'image', class: 'icon')
+      = f.file_field :image, class: 'hidden'
+  = f.submit 'Send', class: 'form__submit'

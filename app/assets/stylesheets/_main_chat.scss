@@ -44,43 +44,38 @@
   overflow:scroll;
 }
 
-.form{
+.form {
+  background-color: #DDDDDD;
+  box-sizing: border-box;
   height: 90px;
-  padding: 20px 40px;
-  background-color: #ddd;
-  bottom: 0;
-  .new-message{
-    display: flex;
-    .input-box{
-      width: 100%;
-      display: flex;
-      position: relative;
-      &__text{
-        height: 50px;
-        width: 100%;
-        padding: 0 40px 0 10px;
-        color: #434a54;
-        border-style: none;
-      }
-      &__image{
-        font-size: 21px;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        cursor: pointer;
-        &__file{
-          display: none;
-        }        
-      }
-    }
-    }
-  .submit-btn{
-    width: 100px;
+  padding: 20px 50px 20px 40px;
+  &__message {
+    border: none;
+    float: left;
     height: 50px;
-    padding: 0 30px;
-    margin-left: 15px;
+    width: calc(100% - 150px);
+  }
+  &__mask {
+    background-color: $white;
+    float: left;
+    height: 50px;
+    padding-right: 10px;
+    &__image {
+      font-size: 20px;
+      line-height: 50px;
+    }
+    .hidden {
+      display: none;
+    }
+  }
+  &__submit {
     background-color: $lightblue;
+    border: none;
     color: $white;
-    cursor: pointer;
-}
+    float: right;
+    font-size: 16px;
+    height: 50px;
+    margin-left: 15px;
+    padding: 0 30px;
+  }
 }
